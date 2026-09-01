@@ -18,9 +18,9 @@ The objective is to identify growth trends, financial performance, and business 
 
 1. Data Cleaning
 2. Data Import into PostgreSQL
-3. SQL Analysis
+3. Perform  SQL Analysis
 4. Power BI Dashboard Development
-5. Business Insights
+5. Finding Business Insights
 
 ## Repository Structure
 
