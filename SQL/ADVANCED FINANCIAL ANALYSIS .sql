@@ -72,4 +72,13 @@ GROUP BY
 ORDER BY Number_Of_Records DESC;
 
 
+-- ============================================================
+-- 5. Top 20 Growth Records
+-- ============================================================
+
+SELECT *
+FROM finance_data
+ORDER BY GrowthRate DESC
+LIMIT 20;
+
 
