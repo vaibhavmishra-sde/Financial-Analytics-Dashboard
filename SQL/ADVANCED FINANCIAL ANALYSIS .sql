@@ -47,4 +47,29 @@ GROUP BY
         ELSE 'Negative Growth'
     END;
 
+-- ============================================================
+-- 4. Growth Rate Distribution
+-- ============================================================
+
+SELECT
+    CASE
+        WHEN GrowthRate < -20 THEN 'Below -20%'
+        WHEN GrowthRate < 0 THEN '-20% to 0%'
+        WHEN GrowthRate < 10 THEN '0% to 10%'
+        WHEN GrowthRate < 20 THEN '10% to 20%'
+        ELSE '20%+'
+    END AS Growth_Range,
+    COUNT(*) AS Number_Of_Records
+FROM finance_data
+GROUP BY
+    CASE
+        WHEN GrowthRate < -20 THEN 'Below -20%'
+        WHEN GrowthRate < 0 THEN '-20% to 0%'
+        WHEN GrowthRate < 10 THEN '0% to 10%'
+        WHEN GrowthRate < 20 THEN '10% to 20%'
+        ELSE '20%+'
+    END
+ORDER BY Number_Of_Records DESC;
+
+
 
