@@ -82,3 +82,12 @@ ORDER BY GrowthRate DESC
 LIMIT 20;
 
 
+-- ============================================================
+-- 6. Bottom 20 Growth Records
+-- ============================================================
+
+SELECT *
+FROM finance_data
+ORDER BY GrowthRate ASC
+LIMIT 20;
+
