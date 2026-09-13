@@ -91,3 +91,15 @@ FROM finance_data
 ORDER BY GrowthRate ASC
 LIMIT 20;
 
+-- ============================================================
+-- 7. Records Above Average Growth
+-- ============================================================
+
+SELECT *
+FROM finance_data
+WHERE GrowthRate > (
+    SELECT AVG(GrowthRate)
+    FROM finance_data
+)
+ORDER BY GrowthRate DESC;
+
