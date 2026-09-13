@@ -1,3 +1,6 @@
+--showing record in table 
+SELECT * FROM finance_data;
+
 -- Total Records
 SELECT COUNT(*) AS Total_Records
 FROM finance_data;
