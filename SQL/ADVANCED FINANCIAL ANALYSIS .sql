@@ -30,3 +30,21 @@ GROUP BY
     END
 ORDER BY Record_Count DESC;
 
+-- ============================================================
+-- 3. Positive vs Negative Growth
+-- ============================================================
+
+SELECT
+    CASE
+        WHEN GrowthRate >= 0 THEN 'Positive Growth'
+        ELSE 'Negative Growth'
+    END AS Growth_Type,
+    COUNT(*) AS Total_Records
+FROM finance_data
+GROUP BY
+    CASE
+        WHEN GrowthRate >= 0 THEN 'Positive Growth'
+        ELSE 'Negative Growth'
+    END;
+
+
