@@ -168,3 +168,11 @@ SELECT
     ) AS Difference_From_Average
 FROM finance_data
 ORDER BY Difference_From_Average DESC;
+
+-- ============================================================
+-- 13. Standard Deviation of Growth
+-- ============================================================
+
+SELECT
+    ROUND(STDDEV(GrowthRate), 2) AS Growth_Std_Deviation
+FROM finance_data;
