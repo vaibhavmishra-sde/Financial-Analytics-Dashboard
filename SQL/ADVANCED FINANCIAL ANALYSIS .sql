@@ -115,4 +115,14 @@ WHERE GrowthRate < (
 )
 ORDER BY GrowthRate ASC;
 
+-- ============================================================
+-- 9. Growth Rate Ranking
+-- ============================================================
+
+SELECT
+    *,
+    RANK() OVER (
+        ORDER BY GrowthRate DESC
+    ) AS Growth_Rank
+FROM finance_data;
 
