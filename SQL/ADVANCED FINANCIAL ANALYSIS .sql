@@ -200,3 +200,32 @@ SELECT
 FROM finance_data
 ORDER BY Growth_Rank
 LIMIT 10;
+
+
+-- ============================================================
+-- 16. Growth Performance Summary
+-- ============================================================
+
+SELECT
+    COUNT(*) AS Total_Records,
+
+    COUNT(
+        CASE
+            WHEN GrowthRate >= 0 THEN 1
+        END
+    ) AS Positive_Growth_Records,
+
+    COUNT(
+        CASE
+            WHEN GrowthRate < 0 THEN 1
+        END
+    ) AS Negative_Growth_Records,
+
+    ROUND(AVG(GrowthRate), 2) AS Average_Growth,
+
+    ROUND(MAX(GrowthRate), 2) AS Maximum_Growth,
+
+    ROUND(MIN(GrowthRate), 2) AS Minimum_Growth
+
+FROM finance_data;
+
