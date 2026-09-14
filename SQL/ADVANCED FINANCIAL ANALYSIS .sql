@@ -176,3 +176,14 @@ ORDER BY Difference_From_Average DESC;
 SELECT
     ROUND(STDDEV(GrowthRate), 2) AS Growth_Std_Deviation
 FROM finance_data;
+
+-- ============================================================
+-- 14. Median Growth Rate
+-- ============================================================
+
+SELECT
+    PERCENTILE_CONT(0.5)
+    WITHIN GROUP (
+        ORDER BY GrowthRate
+    ) AS Median_Growth
+FROM finance_data;
