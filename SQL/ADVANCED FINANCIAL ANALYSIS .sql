@@ -156,3 +156,15 @@ SELECT
     ) AS Running_Average_Growth
 FROM finance_data;
 
+-- ============================================================
+-- 12. Growth Difference From Overall Average
+-- ============================================================
+
+SELECT
+    *,
+    ROUND(
+        GrowthRate - AVG(GrowthRate) OVER (),
+        2
+    ) AS Difference_From_Average
+FROM finance_data
+ORDER BY Difference_From_Average DESC;
