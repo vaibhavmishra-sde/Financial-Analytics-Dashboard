@@ -103,3 +103,16 @@ WHERE GrowthRate > (
 )
 ORDER BY GrowthRate DESC;
 
+-- ============================================================
+-- 8. Records Below Average Growth
+-- ============================================================
+
+SELECT *
+FROM finance_data
+WHERE GrowthRate < (
+    SELECT AVG(GrowthRate)
+    FROM finance_data
+)
+ORDER BY GrowthRate ASC;
+
+
