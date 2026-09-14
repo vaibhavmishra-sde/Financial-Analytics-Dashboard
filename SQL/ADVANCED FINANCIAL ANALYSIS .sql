@@ -141,3 +141,18 @@ FROM (
 ) AS ranked_data
 WHERE Growth_Decile = 1;
 
+-- ============================================================
+-- 11. Running Average Growth
+-- ============================================================
+
+SELECT
+    GrowthRate,
+    ROUND(
+        AVG(GrowthRate) OVER (
+            ORDER BY GrowthRate
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+        ),
+        2
+    ) AS Running_Average_Growth
+FROM finance_data;
+
