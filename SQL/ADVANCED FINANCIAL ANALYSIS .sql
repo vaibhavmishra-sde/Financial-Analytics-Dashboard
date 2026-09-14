@@ -246,3 +246,19 @@ SELECT
     ) AS Positive_Growth_Percentage
 FROM finance_data;
 
+-- ============================================================
+-- 18. Percentage of Negative Growth Records
+-- ============================================================
+
+SELECT
+    ROUND(
+        100.0 *
+        SUM(
+            CASE
+                WHEN GrowthRate < 0 THEN 1
+                ELSE 0
+            END
+        ) / COUNT(*),
+        2
+    ) AS Negative_Growth_Percentage
+FROM finance_data;
