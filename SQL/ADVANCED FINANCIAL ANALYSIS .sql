@@ -229,3 +229,20 @@ SELECT
 
 FROM finance_data;
 
+-- ============================================================
+-- 17. Percentage of Positive Growth Records
+-- ============================================================
+
+SELECT
+    ROUND(
+        100.0 *
+        SUM(
+            CASE
+                WHEN GrowthRate >= 0 THEN 1
+                ELSE 0
+            END
+        ) / COUNT(*),
+        2
+    ) AS Positive_Growth_Percentage
+FROM finance_data;
+
