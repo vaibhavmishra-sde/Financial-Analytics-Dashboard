@@ -126,3 +126,18 @@ SELECT
     ) AS Growth_Rank
 FROM finance_data;
 
+-- ============================================================
+-- 10. Top 10% Growth Records
+-- ============================================================
+
+SELECT *
+FROM (
+    SELECT
+        *,
+        NTILE(10) OVER (
+            ORDER BY GrowthRate DESC
+        ) AS Growth_Decile
+    FROM finance_data
+) AS ranked_data
+WHERE Growth_Decile = 1;
+
