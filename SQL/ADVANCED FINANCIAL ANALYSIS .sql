@@ -187,3 +187,16 @@ SELECT
         ORDER BY GrowthRate
     ) AS Median_Growth
 FROM finance_data;
+
+-- ============================================================
+-- 15. Highest Growth Records With Ranking
+-- ============================================================
+
+SELECT
+    *,
+    DENSE_RANK() OVER (
+        ORDER BY GrowthRate DESC
+    ) AS Growth_Rank
+FROM finance_data
+ORDER BY Growth_Rank
+LIMIT 10;
