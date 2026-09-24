@@ -62,3 +62,14 @@ DIVIDE(
     [Total Records],
     0
 )
+
+-- ============================================================
+-- 8. NEGATIVE GROWTH %
+-- ============================================================
+
+Negative Growth % =
+DIVIDE(
+    [Negative Growth Records],
+    [Total Records],
+    0
+)
