@@ -25,3 +25,9 @@ AVERAGE(FinancialData[GrowthRate])
 Maximum Growth =
 MAX(FinancialData[GrowthRate])
 
+-- ============================================================
+-- 4. MINIMUM GROWTH
+-- ============================================================
+
+Minimum Growth =
+MIN(FinancialData[GrowthRate])
