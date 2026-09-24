@@ -31,3 +31,13 @@ MAX(FinancialData[GrowthRate])
 
 Minimum Growth =
 MIN(FinancialData[GrowthRate])
+
+-- ============================================================
+-- 5. POSITIVE GROWTH RECORDS
+-- ============================================================
+
+Positive Growth Records =
+CALCULATE(
+    COUNTROWS(FinancialData),
+    FinancialData[GrowthRate] >= 0
+)
