@@ -41,3 +41,14 @@ CALCULATE(
     COUNTROWS(FinancialData),
     FinancialData[GrowthRate] >= 0
 )
+
+-- ============================================================
+-- 6. NEGATIVE GROWTH RECORDS
+-- ============================================================
+
+Negative Growth Records =
+CALCULATE(
+    COUNTROWS(FinancialData),
+    FinancialData[GrowthRate] < 0
+)
+
