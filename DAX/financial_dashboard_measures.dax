@@ -16,3 +16,12 @@ COUNTROWS(FinancialData)
 
 Average Growth =
 AVERAGE(FinancialData[GrowthRate])
+
+
+-- ============================================================
+-- 3. MAXIMUM GROWTH
+-- ============================================================
+
+Maximum Growth =
+MAX(FinancialData[GrowthRate])
+
