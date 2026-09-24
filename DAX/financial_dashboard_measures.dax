@@ -52,3 +52,13 @@ CALCULATE(
     FinancialData[GrowthRate] < 0
 )
 
+-- ============================================================
+-- 7. POSITIVE GROWTH %
+-- ============================================================
+
+Positive Growth % =
+DIVIDE(
+    [Positive Growth Records],
+    [Total Records],
+    0
+)
