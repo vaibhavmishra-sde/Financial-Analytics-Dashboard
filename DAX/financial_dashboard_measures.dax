@@ -9,3 +9,10 @@
 
 Total Records =
 COUNTROWS(FinancialData)
+
+-- ============================================================
+-- 2. AVERAGE GROWTH
+-- ============================================================
+
+Average Growth =
+AVERAGE(FinancialData[GrowthRate])
