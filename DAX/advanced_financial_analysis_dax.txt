@@ -116,17 +116,16 @@ RANKX(
     DENSE
 )
 
+
 -- ============================================================
--- 9. Profit Rank
+-- 10. Top 10 Company Flag
 -- ============================================================
 
-Profit Rank =
-RANKX(
-    ALL(FinancialData[Company]),
-    [Total Profit],
-    ,
-    DESC,
-    DENSE
+Top 10 Company Flag =
+IF(
+    [Revenue Rank] <= 10,
+    1,
+    0
 )
 
 
