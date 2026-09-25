@@ -51,3 +51,16 @@ DIVIDE(
     0
 )
 
+-- ============================================================
+-- 6. Revenue vs Selected Total
+-- ============================================================
+
+Revenue % Selected =
+DIVIDE(
+    [Total Revenue],
+    CALCULATE(
+        [Total Revenue],
+        ALLSELECTED(FinancialData)
+    ),
+    0
+)
