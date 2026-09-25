@@ -4,3 +4,13 @@
 
 Total Revenue =
 SUM(FinancialData[Revenue])
+
+
+-- ============================================================
+-- 2. Total Profit
+-- ============================================================
+
+Total Profit =
+SUM(FinancialData[Profit])
+
+
