@@ -5,7 +5,6 @@
 Total Revenue =
 SUM(FinancialData[Revenue])
 
-
 -- ============================================================
 -- 2. Total Profit
 -- ============================================================
@@ -13,4 +12,13 @@ SUM(FinancialData[Revenue])
 Total Profit =
 SUM(FinancialData[Profit])
 
+-- ============================================================
+-- 3. Profit Margin
+-- ============================================================
 
+Profit Margin % =
+DIVIDE(
+    [Total Profit],
+    [Total Revenue],
+    0
+)
