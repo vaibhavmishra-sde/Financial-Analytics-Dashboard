@@ -36,3 +36,18 @@ DIVIDE(
     ),
     0
 )
+
+-- ============================================================
+-- 5. Profit Contribution %
+-- ============================================================
+
+Profit Contribution % =
+DIVIDE(
+    [Total Profit],
+    CALCULATE(
+        [Total Profit],
+        REMOVEFILTERS(FinancialData)
+    ),
+    0
+)
+
