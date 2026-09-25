@@ -88,3 +88,17 @@ IF(
     [Total Revenue],
     0
 )
+
+
+-- ============================================================
+-- 8. Revenue Rank
+-- ============================================================
+
+Revenue Rank =
+RANKX(
+    ALL(FinancialData[Company]),
+    [Total Revenue],
+    ,
+    DESC,
+    DENSE
+)
