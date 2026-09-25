@@ -64,3 +64,27 @@ DIVIDE(
     ),
     0
 )
+
+
+-- ============================================================
+-- 7. Revenue Above Average
+-- ============================================================
+
+Revenue Above Average =
+VAR AverageRevenue =
+    CALCULATE(
+        [Total Revenue],
+        REMOVEFILTERS(FinancialData)
+    )
+    /
+    CALCULATE(
+        COUNTROWS(FinancialData),
+        REMOVEFILTERS(FinancialData)
+    )
+
+RETURN
+IF(
+    [Total Revenue] > AverageRevenue,
+    [Total Revenue],
+    0
+)
