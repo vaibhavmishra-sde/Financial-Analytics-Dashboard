@@ -102,3 +102,25 @@ RANKX(
     DESC,
     DENSE
 )
+
+-- ============================================================
+-- 9. Profit Rank
+-- ============================================================
+
+Profit Rank =
+RANKX(
+    ALL(FinancialData[Company]),
+    [Total Profit],
+    ,
+    DESC,
+    DENSE
+)
+
+
+
+
+
+
+
+
+
