@@ -22,3 +22,17 @@ DIVIDE(
     [Total Revenue],
     0
 )
+
+-- ============================================================
+-- 4. Revenue Contribution %
+-- ============================================================
+
+Revenue Contribution % =
+DIVIDE(
+    [Total Revenue],
+    CALCULATE(
+        [Total Revenue],
+        REMOVEFILTERS(FinancialData)
+    ),
+    0
+)
